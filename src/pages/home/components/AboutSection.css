@@ -1,0 +1,22 @@
+.about-section {
+    width: 15rem;
+    height: 15rem;
+    border: 4px solid var(--section);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    justify-content: space-evenly;
+    background: #fff;
+}
+
+.about-section-logo {
+    width: 5rem;
+    height: 5rem;
+    filter: invert(16%) sepia(66%) saturate(1222%) hue-rotate(176deg) brightness(96%) contrast(94%);
+}
+
+.about-section-desc {
+    text-align: center;
+}

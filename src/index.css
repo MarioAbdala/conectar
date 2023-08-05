@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --main-background: #F0F8FF;
+    --secondary-background: #2E536B;
+    --section: #D1E7F5;
+    --heading: #0C3C5E;
+    --button: #7BA1C0;
+    --button-low: rgba(123, 161, 192, 0.5);
+    --divider: #577B98;
+    --link: #15303F;
+    --footer: #15303F;
+    --main-font: 'Open Sans', sans-serif;
+    --heading-font: 'Montserrat', sans-serif;
+}
+
+h2, h3, h4 {
+    font-family: var(--heading-font);
+    color: var(--heading);
+}
+
+h2 {
+    font-size: 36px;
+}

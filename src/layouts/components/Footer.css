@@ -1,0 +1,6 @@
+.footer {
+    display: flex;
+    min-height: 20vh;
+    background-color: var(--secondary-background);
+    padding-inline: 2.5rem;
+}
