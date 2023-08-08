@@ -1,8 +1,23 @@
-.contact-form {
+.contact-container {
     width: 100%;
-    min-height: 32.5vh;
+    min-height: 37.5vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.contact-form {
+    width: 63.5%;
+    background-color: var(--secondary-background);
+    border-radius: 15px;
+    min-height: 18rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.35rem;
+}
+
+.contact-form>h2 {
+    color: #fff;
 }
