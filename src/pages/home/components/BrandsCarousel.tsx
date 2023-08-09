@@ -5,11 +5,12 @@ import { Brand } from '../../../interfaces';
 
 export const BrandsCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const slideRef = useRef<HTMLDivElement | null>(null);
   const isSmallScreen = window.innerWidth <= 768;
   useEffect(() => {
     const interval = setInterval(() => {
-      if (slideRef.current) {
+      if (!isPaused && slideRef.current) {
         const nextSlide = (currentSlide + 1) % (brands.length + (isSmallScreen ? 2 : 4));
         setCurrentSlide(nextSlide);
         slideRef.current.style.transition = 'transform 0.5s ease-in-out';
@@ -17,7 +18,7 @@ export const BrandsCarousel: React.FC = () => {
           slideRef.current.style.transform = `translateX(-${nextSlide * (isSmallScreen ? 50 : 25)}%)`;
         } else {
           slideRef.current.style.transform = `translateX(-${brands.length * (isSmallScreen ? 50 : 25)}%)`;
-        };
+        }
         if (nextSlide === brands.length) {
           setTimeout(() => {
             slideRef.current!.style.transition = 'none';
@@ -27,14 +28,18 @@ export const BrandsCarousel: React.FC = () => {
               slideRef.current!.style.transition = 'transform 0.5s ease-in-out';
             }, 2500);
           }, 500);
-        };
+        }
       }
     }, 3000);
     return () => clearInterval(interval);
-  }, [currentSlide, isSmallScreen]);
+  }, [currentSlide, isPaused, isSmallScreen]);
   const dummyBrands: Brand[] = brands.slice(0, isSmallScreen ? 2 : 4);
   return (
-    <div className="brands-carousel">
+    <div
+      className="brands-carousel"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <div className="brands-slider" ref={slideRef}>
         {brands.map((brand) => (
           <div key={brand.id} className="brand-slide">
