@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-.contact-form, .contact-success {
+.contact-form, .contact-success, .contact-loading {
     width: 63.5%;
     background-color: var(--secondary-background);
     border-radius: 15px;
@@ -16,6 +16,10 @@
     align-items: center;
     flex-direction: column;
     padding: 1.35rem;
+}
+
+.contact-loading {
+    justify-content: center;
 }
 
 .contact {
