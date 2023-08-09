@@ -1,8 +1,8 @@
-import { FormikErrors, useFormik } from 'formik';
-import './ContactForm.css';
-import { FormValues } from '../../../interfaces';
 import { useState } from 'react';
-import { createEmail } from '../../../helpers';
+import { FormikErrors, useFormik } from 'formik';
+import { FormValues } from '../../../interfaces';
+import { sendEmail } from '../../../helpers';
+import './ContactForm.css';
 
 export const ContactForm = () => {
     const [submit, setSubmit] = useState(false);
@@ -28,10 +28,13 @@ export const ContactForm = () => {
             telefono: '',
             consulta: ''
         },
-        onSubmit: values => {
-            setSubmit(true);
-            console.log(values);
-            console.log(createEmail(values));
+        onSubmit: async (values) => {
+            try {
+                await sendEmail(values);
+                setSubmit(true);
+            } catch (error) {
+                console.error('Error sending email: ', error);
+            };
         },
         validate
     });
