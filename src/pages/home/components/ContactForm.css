@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-.contact-form {
+.contact-form, .contact-success {
     width: 63.5%;
     background-color: var(--secondary-background);
     border-radius: 15px;
@@ -18,6 +18,77 @@
     padding: 1.35rem;
 }
 
-.contact-form>h2 {
+.contact {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+}
+
+.contact>button {
+    width: 20%;
+    background-color: var(--button);
+    border: none;
+    border-radius: 15px;
     color: #fff;
+    height: 2rem;
+    align-self: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.contact>button:hover {
+    background-color: var(--secondary-background);
+    border: 2px solid var(--button);
+    color: var(--button);
+}
+
+.form-input {
+    width: 100%;
+    display: flex;
+}
+
+.dual-form-input {
+    width: 100%;
+    display: flex;
+}
+
+.dual-form-input>.form-input:first-child {
+    margin-right: .5rem;
+}
+
+.dual-form-input>.form-input:last-child {
+    margin-left: .5rem;
+}
+
+.form-input>input[type=text], .form-input>input[type=email] {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    margin-left: .5rem;
+}
+
+.success-icon {
+    filter: invert(99%) sepia(0%) saturate(5%) hue-rotate(134deg) brightness(102%) contrast(103%);
+    margin-top: auto;
+    margin-bottom: .5rem;
+    width: 5rem;
+}
+
+.contact-success>p {
+    margin-bottom: auto;
+}
+
+.contact-form>h2, .contact-success>h2 {
+    color: #fff;
+}
+
+.divider {
+    border-top: 2px solid #fff;
+    border-radius: 15px;
+    width: 100%;
+    margin-top: .25rem;
 }

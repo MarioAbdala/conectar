@@ -23,3 +23,10 @@ export interface Brand {
     imageUrl: string;
     altText: string;
 }
+
+export interface FormValues {
+    nombre: string;
+    email: string;
+    telefono?: string;
+    consulta: string;
+};
