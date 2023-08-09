@@ -55,22 +55,22 @@ export const ContactForm = () => {
                         <hr className="divider"></hr>
                         <form noValidate onSubmit={handleSubmit} action="#" className="contact">
                             <div className="triple-form-input">
-                                <div className="form-input">
+                                <div className={`form-input ${(touched.nombre && errors.nombre) ? errors.nombre : ""}`}>
                                     <label htmlFor="nombre">Nombre</label>
-                                    <input type="text" id="nombre" name="nombre" onChange={handleChange} onBlur={handleBlur} value={values.nombre} className={`${(touched.nombre && errors.nombre) ? errors.nombre : ""}`} />
+                                    <input type="text" id="nombre" name="nombre" onChange={handleChange} onBlur={handleBlur} value={values.nombre} />
                                 </div>
-                                <div className="form-input">
+                                <div className={`form-input ${(touched.email && errors.email) ? errors.email : ""}`}>
                                     <label htmlFor="email">Email</label>
-                                    <input type="email" id="email" name="email" onChange={handleChange} onBlur={handleBlur} value={values.email} className={`${(touched.email && errors.email) ? errors.email : ""}`} />
+                                    <input type="email" id="email" name="email" onChange={handleChange} onBlur={handleBlur} value={values.email} />
                                 </div>
-                                <div className="form-input">
+                                <div className={`form-input ${(touched.telefono && errors.telefono) ? errors.telefono : ""}`}>
                                     <label htmlFor="telefono">Teléfono</label>
-                                    <input type="text" id="telefono" name="telefono" onChange={handleChange} onBlur={handleBlur} value={values.telefono} className={`${(touched.telefono && errors.telefono) ? errors.telefono : ""}`} />
+                                    <input type="text" id="telefono" name="telefono" onChange={handleChange} onBlur={handleBlur} value={values.telefono} />
                                 </div>
                             </div>
-                            <div className="form-input contact-question">
+                            <div className={`form-input contact-question ${(touched.consulta && errors.consulta) ? errors.consulta : ""}`}>
                                 <label htmlFor="consulta">Consulta</label>
-                                <textarea id="consulta" name="consulta" onChange={handleChange} onBlur={handleBlur} value={values.consulta} placeholder="Escribir..." className={`${(touched.consulta && errors.consulta) ? errors.consulta : ""}`} />
+                                <textarea id="consulta" name="consulta" onChange={handleChange} onBlur={handleBlur} value={values.consulta} placeholder="Escribir..." />
                             </div>
                             <button type="submit">Enviar</button>
                         </form>

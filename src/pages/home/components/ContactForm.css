@@ -122,8 +122,12 @@
     margin-top: .25rem;
 }
 
-.input-error {
-    border: 2px solid red !important;
+.input-error>label {
+    color: var(--error);
+}
+
+.input-error>input[type=text], .input-error>input[type=email], .input-error>textarea {
+    border: 2px solid var(--error);
 }
 
 @media only screen and (max-width: 1024px) {
