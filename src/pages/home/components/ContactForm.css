@@ -122,6 +122,10 @@
     margin-top: .25rem;
 }
 
+.input-error {
+    border: 2px solid red !important;
+}
+
 @media only screen and (max-width: 1024px) {
     .contact-form, .contact-success {
         width: 85%;

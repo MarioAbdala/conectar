@@ -27,6 +27,6 @@ export interface Brand {
 export interface FormValues {
     nombre: string;
     email: string;
-    telefono?: string;
+    telefono: string;
     consulta: string;
 };
