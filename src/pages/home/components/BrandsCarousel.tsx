@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { brands } from '../../../data';
-import './BrandsCarousel.css';
 import { Brand } from '../../../interfaces';
+import './BrandsCarousel.css';
 
 export const BrandsCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
