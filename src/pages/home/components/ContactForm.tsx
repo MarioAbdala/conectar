@@ -40,25 +40,27 @@ export const ContactForm = () => {
                     <h2>Dejanos tu consulta</h2>
                     <hr className="divider"></hr>
                     <form noValidate onSubmit={handleSubmit} action="#" className="contact">
-                        <div className="form-input">
-                            <label htmlFor="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" onChange={handleChange} onBlur={handleBlur} value={values.nombre} />
-                        </div>
-                        {touched.nombre && errors.nombre && <span>{errors.nombre}</span>}
-                        <div className="dual-form-input">
+                        <div className="triple-form-input">
+                            <div className="form-input">
+                                <label htmlFor="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" onChange={handleChange} onBlur={handleBlur} value={values.nombre} />
+                            </div>
                             <div className="form-input">
                                 <label htmlFor="email">Email</label>
                                 <input type="email" id="email" name="email" onChange={handleChange} onBlur={handleBlur} value={values.email} />
                             </div>
-                            {touched.email && errors.email && <span>{errors.email}</span>}
                             <div className="form-input">
                                 <label htmlFor="telefono">Teléfono</label>
                                 <input type="text" id="telefono" name="telefono" onChange={handleChange} onBlur={handleBlur} value={values.telefono} />
                             </div>
                         </div>
+                        <div className="triple-error-message">
+                            {touched.nombre && errors.nombre && <span>{errors.nombre}</span>}
+                            {touched.email && errors.email && <span>{errors.email}</span>}
+                        </div>
                         <div className="form-input contact-question">
-                            <label htmlFor="nombre">Consulta</label>
-                            <input type="text" id="consulta" name="consulta" onChange={handleChange} onBlur={handleBlur} value={values.consulta} />
+                            <label htmlFor="consulta">Consulta</label>
+                            <textarea id="consulta" name="consulta" onChange={handleChange} onBlur={handleBlur} value={values.consulta} placeholder="Escribir..." />
                         </div>
                         {touched.consulta && errors.consulta && <span>{errors.consulta}</span>}
                         <button type="submit">Enviar</button>
