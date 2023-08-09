@@ -2,6 +2,7 @@ import { FormikErrors, useFormik } from 'formik';
 import './ContactForm.css';
 import { FormValues } from '../../../interfaces';
 import { useState } from 'react';
+import { createEmail } from '../../../helpers';
 
 export const ContactForm = () => {
     const [submit, setSubmit] = useState(false);
@@ -30,6 +31,7 @@ export const ContactForm = () => {
         onSubmit: values => {
             setSubmit(true);
             console.log(values);
+            console.log(createEmail(values));
         },
         validate
     });
