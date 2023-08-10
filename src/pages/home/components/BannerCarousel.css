@@ -51,7 +51,7 @@
     margin-top: 1rem;
   }
   
-  .dot {
+  .banner-carousel .dot {
     width: 10px;
     height: 10px;
     background-color: #ccc;
@@ -61,10 +61,10 @@
     transition: background-color 0.3s ease-in-out;
   }
   
-  .dot.active {
+  .banner-carousel .dot.active {
     background-color: var(--button);
   }
-  .dot:hover {
+  .banner-carousel .dot:hover {
     background-color: var(--button);
   }
   
