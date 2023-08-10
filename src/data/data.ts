@@ -1,4 +1,4 @@
-import { AboutSection, Banner, Brand } from "../interfaces";
+import { AboutSection, Banner, Brand, Row } from "../interfaces";
 
 export const banners: Array<Banner> = [
     {id: 1, imageUrl: "banners/banner-1.jpg"},
@@ -40,3 +40,5 @@ export const brands: Brand[] = [
     { id: 19, imageUrl: 'logos/kingston.png', altText: 'Kingston logo' },
     { id: 20, imageUrl: 'logos/adata.png', altText: 'Adata logo' },
 ];
+
+export const row1 : Row[] = [{text: "San Martín 575", isLink: false, id: 1}, {text: "3240, Villaguay", isLink: false, id: 2}, {text: "Provincia de Entre Ríos", isLink: false, id:3}, {text: "Argentina", isLink: false, id:4}];

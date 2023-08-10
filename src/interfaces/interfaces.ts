@@ -30,3 +30,15 @@ export interface FormValues {
     telefono: string;
     consulta: string;
 };
+
+export interface Row {
+    text: string;
+    isLink: boolean;
+    url?: string;
+    id: number;
+};
+
+export interface FooterColumnProps {
+    title: string;
+    rows: Row[];
+};
