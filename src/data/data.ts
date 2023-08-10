@@ -1,6 +1,10 @@
 import { AboutSection, Banner, Brand } from "../interfaces";
 
-export const banners: Array<Banner> = [{id: 0, imageUrl: "https://www.mexx.com.ar/uploads/25-07-2023-05-07-02-samsuhngboiik.jpg"}, {id: 1, imageUrl: "https://www.mexx.com.ar/uploads/30-06-2023-04-06-38-jpg%20nv2.jpg"}, {id: 2, imageUrl: "https://www.mexx.com.ar/uploads/20-07-2023-12-07-21-Sin%20t%C3%ADtulo-3.jpg"}];
+export const banners: Array<Banner> = [
+    {id: 1, imageUrl: "banners/banner-1.jpg"},
+    {id: 2, imageUrl: "banners/banner-2.jpg"},
+    {id: 3, imageUrl: "banners/banner-3.jpg"}
+];
 
 export const sections: Array<AboutSection> = [
     {id: 1, imageUrl: "images/computer.svg", heading: "Computación", description: "Venta de equipos informáticos."},
