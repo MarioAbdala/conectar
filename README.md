@@ -1,6 +1,6 @@
 # Conectar - Website
 
-Welcome to **Conectar**, a website designed for my father's computing business.
+Welcome to **Conectar**, a website designed as a landing page for my father's computing business.
 
 ## Technologies Used
 
@@ -18,7 +18,7 @@ Welcome to **Conectar**, a website designed for my father's computing business.
 
 This project is maintained and developed by myself.
 
-- **[Mario Abdala](https://github.com/MarioAbdala)**: You can find all my info in my repo!
+- **[Mario Abdala](https://github.com/MarioAbdala)**: You can find all my info in my profile!
 
 ## Installation
 
